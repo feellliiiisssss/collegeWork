@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello JS</title>
+  </head>
+  <body>
+    <script>
+      var main_lagi = confirm;
+      alert("Selamat Datang di Permainan Tebak Angka");
+      //mulai permainan
+      do {
+        alert("Mari bermain tebak angka");
+
+        //Generate Angka Random 1 - 100
+        const angkarandom = Math.floor(Math.random() * 100) + 1;
+
+        console.log("angka random: " + angkarandom);
+
+        do {
+          tebak = prompt("Tebak angka 1 - 100");
+          if (tebak < angkarandom) {
+            alert("Tebakan terlalu kecil, coba angka yang lebih besar lagi");
+          } else if (tebak > angkarandom) {
+            // saat lebih dari
+            alert("Tebakan terlalu besar, coba angka yang lebih kecil");
+          } else if (tebak == angkarandom) {
+            // saat benar
+            alert("Selamat! tebakan kamu benar.");
+          }
+        } while (tebak != angkarandom);
+
+        main_lagi = confirm("Mau main lagi?");
+      } while (main_lagi == TRUE);
+    </script>
+  </body>
+</html>
